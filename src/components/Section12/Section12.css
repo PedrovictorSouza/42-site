@@ -1,0 +1,41 @@
+.section12 .call-to-action {
+  font-size: 36px;
+  font-weight: 300;
+  color: #999;
+  margin: 0 0 10px 0;
+  text-transform: lowercase;
+}
+
+.section12 .description {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section12 .info-line {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  color: black;
+}
+
+.section12 .text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section12 .dash {
+  font-size: 1.2em;
+  color: black;
+  line-height: 1;
+}
+
+.section12 .text-block p {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  color: black;
+}

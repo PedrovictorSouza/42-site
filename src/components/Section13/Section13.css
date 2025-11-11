@@ -1,0 +1,52 @@
+.section13 {
+  padding: 60px;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section13-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.section13-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.section13-text {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.section13-text .text-line {
+  display: block;
+  line-height: 0.84;
+}
+
+.section13-text .text-gray {
+  color: #999;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.section13-text .text-black {
+  color: black;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.section13-text .text-large {
+  font-size: 128px;
+  font-weight: 300;
+}

@@ -1,0 +1,91 @@
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.text-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 60px;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+}
+
+.text-section .content {
+  text-align: left;
+  margin-left: 20%;
+}
+
+.text-section .title {
+  font-size: 96px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  color: black;
+}
+
+.text-section .title .line2 {
+  font-size: 112px;
+  display: block;
+}
+
+.text-section .separator {
+  width: 60px;
+  height: 1px;
+  background-color: black;
+  margin: 0 0 30px 0;
+}
+
+.text-section .description {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  color: black;
+}
+
+section.grid-columns-40-60 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+section.grid-rows-20-80 {
+  display: grid !important;
+  grid-template-rows: 20% 80%;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.row-top-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px;
+}
+
+.row-top-header .content {
+  color: white;
+}
+
+.row-top-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.row-top-header p {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.row-bottom {
+  width: 100%;
+}
+
