@@ -17,7 +17,7 @@ export function GridNumbers() {
     return () => window.removeEventListener('resize', updateDimensions)
   }, [])
 
-  const gridNumbers: JSX.Element[] = []
+  const gridNumbers: React.ReactElement[] = []
 
   for (let x = 0; x <= dimensions.width; x += 100) {
     for (let y = 0; y <= dimensions.height; y += 100) {

@@ -1,4 +1,5 @@
-import { useState, useEffect, RefObject } from 'react'
+import { useState, useEffect } from 'react'
+import type { RefObject } from 'react'
 
 export function useIntersectionObserver(
   ref: RefObject<HTMLElement | null>,
