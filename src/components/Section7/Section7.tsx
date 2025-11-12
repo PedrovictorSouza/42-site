@@ -6,7 +6,7 @@ import { useRandomDelays } from '../../hooks/useRandomDelays'
 function Section7() {
   const sectionRef = useRef<HTMLElement>(null)
   const isVisible = useIntersectionObserver(sectionRef)
-  const delays = useRandomDelays(8)
+  const delays = useRandomDelays(10)
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const steps = [
@@ -84,16 +84,16 @@ function Section7() {
   return (
     <section ref={sectionRef} className="section7" id="a-programacao">
       <div className="col-left">
-        <h1 className={`title ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[0]}ms` } : {}}>
+        <h1 className={`title ${isVisible ? 'fade-in-left' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[0]}ms` } : {}}>
           <span className="line1">etapas do</span>
           <span className="line2">programa</span>
         </h1>
       </div>
       <div className={`separator ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[1]}ms` } : {}}></div>
       <div className="col-right">
-        <div className={`accordion ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[2]}ms` } : {}}>
+        <div className={`accordion ${isVisible ? 'fade-in-right' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[2]}ms` } : {}}>
           {steps.map((step, index) => (
-            <div key={index} className="accordion-item">
+            <div key={index} className={`accordion-item ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[3] + index * 100}ms` } : {}}>
               <button
                 className={`accordion-header ${expandedIndex === index ? 'expanded' : ''}`}
                 onClick={() => handleToggle(index)}

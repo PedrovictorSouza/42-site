@@ -34,6 +34,13 @@ export function useHomeLines(deps: HomeLinesDependencies): Line[] {
       
       const gridCols = 3
       const gridRows = 1
+      
+      let gridSize = 100
+      if (window.innerWidth <= 768) {
+        const baseWidth = 1920
+        const scaleFactor = colRect.width / baseWidth
+        gridSize = 100 * scaleFactor
+      }
 
       const newLines: Line[] = []
 
@@ -58,10 +65,10 @@ export function useHomeLines(deps: HomeLinesDependencies): Line[] {
             gridY2 = 7
           }
 
-          const absoluteX1 = gridX1 * 100
-          const absoluteY1 = gridY1 * 100
-          const absoluteX2 = gridX2 * 100
-          const absoluteY2 = gridY2 * 100
+          const absoluteX1 = gridX1 * gridSize
+          const absoluteY1 = gridY1 * gridSize
+          const absoluteX2 = gridX2 * gridSize
+          const absoluteY2 = gridY2 * gridSize
 
           const x1 = absoluteX1 - containerAbsoluteLeft
           const y1 = absoluteY1 - containerAbsoluteTop

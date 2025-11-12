@@ -1,12 +1,15 @@
 import { useState, useRef, useEffect } from 'react'
 import './Home.css'
 import { useHomeLines } from './useHomeLines'
-import image42 from '../../assets/ 42.png'
+import { GridNumbers } from './GridNumbers'
+import image42 from '../../assets/42.svg'
+import logoMastertech from '../../assets/logo-mastertech.png'
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false)
   const [count, setCount] = useState(0)
   const [showElements, setShowElements] = useState(false)
+  const [showGrid, setShowGrid] = useState(false)
   const [learningTextStyle, setLearningTextStyle] = useState({ left: 0, top: 0 })
   const [hoveredIndex, setHoveredIndex] = useState(0)
   const [arrowPosition, setArrowPosition] = useState({ top: 0 })
@@ -107,6 +110,7 @@ function Home() {
 
   return (
     <div className="home">
+      {showGrid && <GridNumbers />}
       <button 
         className={`menu-toggle ${isOpen ? 'open' : ''} ${showElements ? 'fade-in-up' : 'hidden'}`}
         style={showElements ? { animationDelay: `${elementDelays.menuToggle}ms` } : {}}
@@ -116,6 +120,18 @@ function Home() {
         <span></span>
         <span></span>
       </button>
+      <button 
+        className={`grid-toggle ${showGrid ? 'active' : ''}`}
+        onClick={() => setShowGrid(!showGrid)}
+        aria-label="Toggle grid"
+      >
+        G
+      </button>
+      <img 
+        src={logoMastertech} 
+        alt="Mastertech" 
+        className="mastertech-logo"
+      />
       {isOpen && (
         <nav className="menu">
           <svg 
@@ -204,8 +220,8 @@ function Home() {
           })}
           <div className={`home-text ${showElements ? 'fade-in-up' : 'hidden'}`} ref={textRef} style={showElements ? { animationDelay: `${elementDelays.homeText}ms` } : {}}>
             <h1 className="home-title" ref={titleRef}>
-              <span className="line1">quarenta</span>
-              <span className="line2">& duas</span>
+              <span className="line1">QUARENTA</span>
+              <span className="line2">& DUAS</span>
             </h1>
             <div className="home-separator" ref={separatorRef}></div>
             <p className="home-description" ref={descriptionRef}>

@@ -11,7 +11,7 @@ function Section4() {
   return (
     <section ref={sectionRef} className="grid-columns-40-60 section4">
       <div className="col-left">
-        <div className={`text-block ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[0]}ms` } : {}}>
+        <div className={`text-block ${isVisible ? 'fade-in-left' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[0]}ms` } : {}}>
           <span className="dash">__</span>
           <p>
             a casa é o ambiente presencial<br />
@@ -23,7 +23,7 @@ function Section4() {
         </div>
       </div>
       <div className="col-right">
-        <div className={`text-block ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[1]}ms` } : {}}>
+        <div className={`text-block ${isVisible ? 'fade-in-right' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[1]}ms` } : {}}>
           <span className="dash">__</span>
           <p>
             quando o ciclo termina, a casa<br />
