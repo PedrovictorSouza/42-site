@@ -1,20 +1,9 @@
-import { useState, useEffect } from 'react'
 import { useCursorMask } from '../../hooks/useCursorMask'
 import blueprintSvg from '../../assets/blueprint.svg'
 import './CursorMask.css'
 
 function CursorMask() {
   const { position, isActive, radius } = useCursorMask(75)
-  const [dimensions, setDimensions] = useState({ width: typeof window !== 'undefined' ? window.innerWidth : 1920, height: typeof window !== 'undefined' ? window.innerHeight : 1080 })
-
-  useEffect(() => {
-    const handleResize = () => {
-      setDimensions({ width: window.innerWidth, height: window.innerHeight })
-    }
-
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
 
   return (
     <>
