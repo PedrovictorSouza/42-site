@@ -7,13 +7,13 @@ import {
   Section5,
   Section6,
   Section7,
-  Section8,
   Section9,
   Section10,
   Section11,
   Section12,
   Section13,
   Footer,
+  CursorMask,
 } from './components'
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
 
   return (
     <>
+      <CursorMask />
       <div style={{ position: 'relative', minHeight: '100vh' }}>
         <button 
           className="color-toggle"
@@ -44,7 +45,6 @@ function App() {
       <Section5 />
       <Section6 />
       <Section7 />
-      <Section8 />
       <Section9 />
       <Section10 />
       <Section11 />

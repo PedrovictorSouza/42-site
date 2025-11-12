@@ -37,16 +37,37 @@
 .section13-text .text-gray {
   color: #999;
   font-size: 48px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .section13-text .text-black {
   color: black;
   font-size: 48px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .section13-text .text-large {
   font-size: 128px;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .section13 {
+    padding: 30px 20px;
+    min-height: auto;
+  }
+
+  .section13-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .section13-text .text-gray,
+  .section13-text .text-black {
+    font-size: 32px;
+  }
+
+  .section13-text .text-large {
+    font-size: 64px;
+  }
 }

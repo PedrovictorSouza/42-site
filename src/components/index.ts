@@ -12,4 +12,5 @@ export { default as Section11 } from './Section11/Section11'
 export { default as Section12 } from './Section12/Section12'
 export { default as Section13 } from './Section13/Section13'
 export { default as Footer } from './Footer/Footer'
+export { default as CursorMask } from './CursorMask/CursorMask'
 

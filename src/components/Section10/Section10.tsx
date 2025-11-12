@@ -12,7 +12,7 @@ function Section10() {
     <section ref={sectionRef} className="grid-rows-20-80 section10">
       <div className="row-top-header section10-top">
         <div className={`content ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[0]}ms` } : {}}>
-          <h2>os incômodos</h2>
+          <h2>os <span className="in-strikethrough">in</span>comodos</h2>
           <p>uma ilustração das intencionalidades de cada lugar</p>
         </div>
       </div>

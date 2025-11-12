@@ -21,7 +21,7 @@
 .section5 .main-title {
   margin: 0;
   padding: 0;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
   line-height: 1.2;
 }
@@ -44,7 +44,7 @@
 
 .section5 .subtitle {
   font-size: 54px;
-  font-weight: 400;
+  font-weight: 500;
   color: #999;
   line-height: 1;
 }
@@ -63,8 +63,32 @@
 
 .section5 .description p {
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 500;
   color: black;
   margin: 0;
   line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .section5 {
+    padding: 30px 20px;
+  }
+
+  section.grid-columns-40-60 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .section5 .main-title .line1,
+  .section5 .main-title .line2 {
+    font-size: 48px;
+  }
+
+  .section5 .subtitle {
+    font-size: 32px;
+  }
+
+  .section5 .description p {
+    font-size: 24px;
+  }
 }

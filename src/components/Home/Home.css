@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 20% 80%;
   height: 100vh;
+  overflow: hidden;
 }
 
 .col-left {
@@ -54,7 +55,7 @@
 
 .home-title {
   font-size: 105.6px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.2;
   margin: 0;
   color: black;
@@ -75,13 +76,14 @@
 }
 
 .home-description {
-  font-size: 3rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 400;
   line-height: 1.6;
   margin: 0;
   color: black;
   margin-top: 0;
   width: 20vw;
+  max-height: fit-content;
 }
 
 .circle-svg {
@@ -247,7 +249,7 @@
   transform-origin: left center;
   color: black;
   font-size: 240px;
-  font-weight: 600;
+  font-weight: 300;
   margin: 0;
   letter-spacing: 4px;
   white-space: nowrap;
@@ -275,6 +277,77 @@
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .home section {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .col-left {
+    display: none;
+  }
+
+  .col-right {
+    --circle-radius: 50px;
+    --circle-position-y: 20px;
+    --circle-position-x: 20px;
+    --text-left: 20px;
+    --text-top: 20px;
+  }
+
+  .home-text {
+    padding: 20px;
+    padding-top: 100px;
+  }
+
+  .home-text.fade-in-up {
+    height: auto;
+  }
+
+  .home-title {
+    font-size: 64px;
+    margin-top: 0;
+  }
+
+  .home-title .line2 {
+    font-size: 72px;
+  }
+
+  .home-description {
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .circle-svg {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    transform: none;
+    z-index: 4;
+  }
+
+  .circle-image {
+    display: none;
+  }
+
+  .circle-text {
+    display: none;
+  }
+
+  .vertical-text {
+    font-size: 120px;
+  }
+
+  .menu li {
+    font-size: 32px;
+    margin-left: 0;
   }
 }
 

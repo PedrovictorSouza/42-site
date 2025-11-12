@@ -11,15 +11,20 @@ function Section12() {
   return (
     <section ref={sectionRef} className="text-section">
         <div className="content">
-        <p className={`call-to-action ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[0]}ms` } : {}}>
-          call to action
-        </p>
-        <h1 className={`title ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[1]}ms` } : {}}>
+        <h1 className={`title ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[0]}ms` } : {}}>
           <span className="line1">acesso a casa</span>
         </h1>
-        <div className={`separator ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[2]}ms` } : {}}></div>
-        <div className={`description ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[3]}ms` } : {}}>
+        <div className={`separator ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[1]}ms` } : {}}></div>
+        <div className={`description ${isVisible ? 'fade-in-up' : 'hidden'}`} style={isVisible ? { animationDelay: `${delays[2]}ms` } : {}}>
           <p className="info-line">20 vagas — 20k por pessoa</p>
+          <button 
+            className={`call-to-action ${isVisible ? 'fade-in-up' : 'hidden'}`} 
+            style={isVisible ? { animationDelay: `${delays[3]}ms` } : {}}
+            onClick={() => {
+            }}
+          >
+            call to action
+          </button>
           <div className="text-block">
             <span className="dash">__</span>
             <p>

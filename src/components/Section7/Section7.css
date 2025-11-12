@@ -17,7 +17,7 @@
 .section7 .title {
   margin: 0;
   padding: 0;
-  font-weight: 300;
+  font-weight: 400;
   color: black;
   line-height: 1.2;
 }
@@ -45,18 +45,130 @@
   justify-content: flex-start;
 }
 
-.section7 .steps-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.section7 .accordion {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
-.section7 .steps-list li {
+.section7 .accordion-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.section7 .accordion-header {
   font-size: 48px;
-  font-weight: 300;
+  font-weight: 400;
   color: black;
   line-height: 1.2;
+  background: none;
+  border: none;
+  padding: 0;
+  padding-right: 40px;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  transition: font-weight 0.3s ease;
+  position: relative;
+}
+
+.section7 .accordion-header::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1.2;
+  transition: transform 0.3s ease;
+}
+
+.section7 .accordion-header.expanded::after {
+  content: '−';
+  transform: rotate(0deg);
+}
+
+.section7 .accordion-header:hover {
+  font-weight: 500;
+}
+
+.section7 .accordion-header.expanded {
+  font-weight: 600;
+}
+
+.section7 .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0;
+}
+
+.section7 .accordion-content.expanded {
+  max-height: 1000px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.section7 .accordion-details-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  color: black;
+}
+
+.section7 .accordion-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section7 .accordion-content li {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: black;
+  margin-bottom: 8px;
+  margin-left: 50px;
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  .section7 {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 30px;
+    min-height: auto;
+  }
+
+  .section7 .separator {
+    width: 200px;
+    height: 1px;
+    transform: rotate(0deg);
+  }
+
+  .section7 .title .line1,
+  .section7 .title .line2 {
+    font-size: 36px;
+  }
+
+  .section7 .accordion-header {
+    font-size: 32px;
+    padding-right: 35px;
+  }
+
+  .section7 .accordion-header::after {
+    font-size: 32px;
+  }
+
+  .section7 .accordion-details-title {
+    font-size: 20px;
+  }
+
+  .section7 .accordion-content li {
+    font-size: 18px;
+    margin-left: 30px;
+  }
 }

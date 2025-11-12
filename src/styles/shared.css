@@ -22,15 +22,15 @@ section.text-section {
 }
 
 .text-section .title {
-  font-size: 96px;
-  font-weight: 300;
+  font-size: 70px;
+  font-weight: 500;
   line-height: 1.2;
   margin: 0 0 20px 0;
   color: black;
 }
 
 .text-section .title .line2 {
-  font-size: 112px;
+  font-size: 82px;
   display: block;
 }
 
@@ -43,7 +43,7 @@ section.text-section {
 
 .text-section .description {
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   margin: 0;
   color: black;
@@ -75,17 +75,64 @@ section.grid-rows-20-80 {
 
 .row-top-header h2 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 10px 0;
 }
 
 .row-top-header p {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
 }
 
 .row-bottom {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  section {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  section.text-section {
+    padding: 30px 20px;
+  }
+
+  .text-section .content {
+    margin-left: 0;
+  }
+
+  .text-section .title {
+    font-size: 48px;
+  }
+
+  .text-section .title .line2 {
+    font-size: 56px;
+  }
+
+  .text-section .description {
+    font-size: 24px;
+  }
+
+  section.grid-columns-40-60 {
+    grid-template-columns: 1fr;
+  }
+
+  section.grid-rows-20-80 {
+    grid-template-rows: auto 1fr;
+  }
+
+  .row-top-header {
+    padding: 30px 20px;
+  }
+
+  .row-top-header h2 {
+    font-size: 24px;
+  }
+
+  .row-top-header p {
+    font-size: 16px;
+  }
 }
 
